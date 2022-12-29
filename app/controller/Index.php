@@ -52,7 +52,7 @@ class Index extends BaseController
 
         // https://developers.google.com/gmail/api/reference/rest/v1/users.messages/list
 
-        $list = $httpClient->get('https://gmail.googleapis.com/gmail/v1/users/'.$email_address.'/messages?maxResults=10&q=from: txt.voice.google.com Apple ID');
+        $list = $httpClient->get('https://gmail.googleapis.com/gmail/v1/users/'.$email_address.'/messages?maxResults=10&q=from: voice-noreply@google.com Apple ID');
         $response = $list->getBody();
         $object = json_decode($response, true);
         
